@@ -1,8 +1,6 @@
 # golden-raspberry-awards-frontend
 An Application created with ReactJS, Typescript and NextJS to show The Raspberry Awards - aka the worst movies of all time awards
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Install
 
 To instal the project, first install the dependencies: 
