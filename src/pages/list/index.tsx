@@ -13,7 +13,10 @@ const MovieListPage: React.FC = () => {
   const [year, setYear] = useState('');
   const [winner, setWinner] = useState(0);
   const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
   const [message, setMessage] = useState('')
+
+  const limit = 10
 
   const handlePaginationChange = (_: any, page: number) => {
     handlePagination(page);
@@ -25,7 +28,7 @@ const MovieListPage: React.FC = () => {
 
   const handlePagination: (page: number) => Promise<Movie[]> = async (page) => {
     setPage(page)
-    let query = `?page=${page}`
+    let query = `?page=${page-1}&size=${limit}`
     
     if (winner == -1) {
         query += '&winner=false'
@@ -43,9 +46,8 @@ const MovieListPage: React.FC = () => {
     
     return await api.get(query)
     .then(response => {
-        console.log(response.data);
-        
-        setMovies(response.data)
+        setMovies(response.data.content)
+        setTotalPages(response.data.totalPages)
         return response.data
     })
     .catch(err => {
@@ -132,7 +134,7 @@ const MovieListPage: React.FC = () => {
         </main>
         <main className={styles.content}>
             <Pagination
-                count={50}
+                count={totalPages}
                 page={page}
                 onChange={handlePaginationChange}
             />
