@@ -24,8 +24,9 @@ const MovieSearch = () => {
 
     })
     .catch(err => {
-        setMessage(err)
-        console.error(err);
+        setMovies([])
+        setMessage(err.message)
+        console.error(err.message);
     })
   };
 
