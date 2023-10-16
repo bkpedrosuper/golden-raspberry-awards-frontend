@@ -6,7 +6,6 @@ import Header from '../app/components/header'
 export default function Home() {
   return (
     <main className={styles.page}>
-      <Header/>
 
       <div className={styles.center}>
         {/* <Image
@@ -45,7 +44,7 @@ export default function Home() {
           className={styles.card}
           rel="noopener noreferrer"
           >
-          <Link href="/dashboard">
+          <Link href="/list">
             <h2>
               List <span>-&gt;</span>
             </h2>

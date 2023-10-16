@@ -1,9 +1,9 @@
 
 import api from '../../services/api'
-import {AxiosResponse} from 'axios'
 import styles from '../../app/page.module.css'
 import React from 'react'
 import Grid from '@mui/material/Grid';
+import Head from 'next/head'
 
 // Get cards
 import ListWinnerCard from './years_winners'
@@ -26,6 +26,9 @@ const DashBord: React.FC<DashBordProps> = ({years, studios, min_max}) => {
 
     return (
         <div className={styles.page}>
+            <Head>
+                <title>Dashboard</title>
+            </Head>
             <main className={styles.content}>
 
                 <Grid container spacing={3}>

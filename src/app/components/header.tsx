@@ -13,7 +13,6 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import Link from 'next/link'
-import styles from '../page.module.css'
 
 
 const pages = [

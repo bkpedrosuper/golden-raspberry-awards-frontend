@@ -8,6 +8,8 @@ import {StyledTableRow} from '../styles/table_style'
 import Pagination from '@mui/material/Pagination';
 import api from '../../services/api'
 
+import Head from 'next/head'
+
 const MovieListPage: React.FC = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [year, setYear] = useState('');
@@ -62,13 +64,17 @@ const MovieListPage: React.FC = () => {
 
   return (
     <div className={styles.page}>
+        <Head>
+            <title>List</title>
+        </Head>
+
 
         <main className={styles.content}>
             <Card className={styles.table_list}>
                 <CardContent>
                     <Grid container spacing={4}>
                         <Grid item xs={6} sm={3} container justifyContent='center' alignItems='center'>
-                            <Typography variant="h5" gutterBottom fontWeight="bold">
+                            <Typography variant="h5" fontWeight="bold">
                                 List movies
                             </Typography>
                         </Grid>
