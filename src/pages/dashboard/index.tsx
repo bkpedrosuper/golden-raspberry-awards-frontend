@@ -61,7 +61,7 @@ async function getMinMaxIntervals(): Promise<ListIntervals> {
         return response.data
     })
     .catch(err => {
-        console.log(err);
+        console.error(err);
         throw err
     })
 }
@@ -77,7 +77,7 @@ async function getStudioWinners(): Promise<ListWinnersStudios> {
         return result
     })
     .catch(err => {
-        console.log(err);
+        console.error(err);
         throw err
     })
 }
@@ -94,7 +94,7 @@ async function getWinnersList(): Promise<ListWinnersYears> {
         return result
     })
     .catch(err => {
-        console.log(err);
+        console.error(err);
         throw err
     })
 }

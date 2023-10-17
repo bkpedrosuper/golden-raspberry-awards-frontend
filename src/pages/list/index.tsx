@@ -42,8 +42,6 @@ const MovieListPage: React.FC = () => {
     if (year) {
         query+=`&year=${year}`
     }
-
-    console.log(query)
     
     
     return await api.get(query)
