@@ -103,7 +103,7 @@ const MovieListPage: React.FC = () => {
                             </TextField>
                         </Grid>
                         <Grid item xs={6} sm={3} container justifyContent='center' alignItems='center'>
-                            <Button variant="contained" onClick={handleSearch}>
+                            <Button data-testid="search-button" variant="contained" onClick={handleSearch}>
                                 <SearchIcon/>
                             </Button>
                         </Grid>
