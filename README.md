@@ -8,12 +8,20 @@ To instal the project, first install the dependencies:
 npm install
 ```
 
-## Getting Started
+## Run the project
 
-First, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
+```
+
+## Tests
+
+Tests can be run with
+
+```bash
+npm run test
 ```
 
 Open [http://localhost:3000](http://localhost:3001) with your browser to see the result.
