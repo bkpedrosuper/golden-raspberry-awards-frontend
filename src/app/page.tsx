@@ -1,11 +1,9 @@
-import Image from 'next/image'
 import styles from './page.module.css'
 import Link from 'next/link'
-import Header from '../app/components/header'
 
 export default function Home() {
   return (
-    <main className={styles.page}>
+    <main className={styles.main}>
 
       <div className={styles.center}>
         {/* <Image
@@ -29,13 +27,13 @@ export default function Home() {
         <div
           className={styles.card}
           rel="noopener noreferrer"
-          >
+        >
           <Link href="/dashboard">
             <h2>
-            DashBoard <span>-&gt;</span>
+              DashBoard <span>-&gt;</span>
             </h2>
             <p>
-            Find insightful informations about the Golden Raspberry Awards overall
+              Find insightful informations about the Golden Raspberry Awards overall
             </p>
           </Link>
         </div>
@@ -43,7 +41,7 @@ export default function Home() {
         <div
           className={styles.card}
           rel="noopener noreferrer"
-          >
+        >
           <Link href="/list">
             <h2>
               List <span>-&gt;</span>

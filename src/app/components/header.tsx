@@ -14,7 +14,6 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import Link from 'next/link'
 
-
 const pages = [
   {
     name: 'Home',
@@ -31,22 +30,22 @@ const pages = [
 ]
 
 function Header() {
-    const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
+  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
-    const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-        setAnchorElNav(event.currentTarget);
-    };
-    
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
-    
+  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorElNav(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
 
   return (
     <AppBar color='primary' position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-        <Typography
+          <Typography
             variant="h6"
             noWrap
             component="a"
@@ -95,9 +94,9 @@ function Header() {
             >
               {pages.map((page) => (
                 <Link key={page.name} href={page.href}>
-                    <MenuItem onClick={handleCloseNavMenu}>
+                  <MenuItem onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">{page.name}</Typography>
-                    </MenuItem>
+                  </MenuItem>
                 </Link>
               ))}
             </Menu>
@@ -123,7 +122,7 @@ function Header() {
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page, _) => (
+            {pages.map((page) => (
               <Link key={page.name} href={page.href}>
                 <Button
                   sx={{ my: 4, mx: 2, color: 'white', display: 'block' }}

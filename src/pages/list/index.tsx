@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Select, MenuItem, InputLabel } from '@mui/material';
+import { Table, TableBody, TableCell, TableHead, MenuItem } from '@mui/material';
 import { Button, TextField, Card, CardContent, Typography, Grid, } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import { Movie } from '../../interfaces/interfaces'; // Importe a interface Movie
@@ -24,10 +24,11 @@ const MovieListPage: React.FC = () => {
         handlePagination(page);
     };
 
-    const handleSearch = (_: any) => {
+    const handleSearch = () => {
         handlePagination(1)
     }
 
+    // eslint-disable-next-line no-unused-vars
     const handlePagination: (page: number) => Promise<Movie[]> = async (page) => {
         setPage(page)
         let query = `?page=${page - 1}&size=${limit}`
