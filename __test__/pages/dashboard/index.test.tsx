@@ -8,9 +8,9 @@ describe('DashBoard Cards Module', () => {
     it('Check if all cards are loaded', () => {
         render(<DashBord years={yearsWinnersList} min_max={minMaxIntervals} studios={studioWinnersList} />)
         const cardYears = screen.getByRole('heading', { name: 'List years with multiple winners' })
-        const cardStudios = screen.getByRole('heading', { name: 'Top 3 studios' })
+        const cardStudios = screen.getByRole('heading', { name: 'Top 3 studios with winners' })
         const cardMinMax = screen.getByRole('heading', { name: 'Producers with longest and shortest interval between wins' })
-        const cardWins = screen.getByRole('heading', { name: 'List movies winner by year' })
+        const cardWins = screen.getByRole('heading', { name: 'List movie winner by year' })
 
         expect(cardStudios).toBeInTheDocument()
         expect(cardYears).toBeInTheDocument()

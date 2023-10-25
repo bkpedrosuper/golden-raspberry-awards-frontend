@@ -9,8 +9,8 @@ describe('Studio Card Module', () => {
 
     it('Should render the card rows properly', () => {
         render(<ListStudiosCard studios={studioWinnersList.studios} />)
-        const titleMax = screen.getByRole('heading', { name: 'Top 3 studios' })
-        const headRows = screen.getByRole('row', { name: 'Studio Win count' })
+        const titleMax = screen.getByRole('heading', { name: 'Top 3 studios with winners' })
+        const headRows = screen.getByRole('row', { name: 'Name Win count' })
 
         expect(titleMax).toBeInTheDocument()
         expect(headRows).toBeInTheDocument()
