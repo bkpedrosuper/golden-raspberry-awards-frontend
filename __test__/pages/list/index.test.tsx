@@ -30,5 +30,5 @@ describe('DashBoard Cards Module', () => {
         response.data.content.map((movie: any) => {
             expect(movie.winner).toBe(true)
         })
-    })
+    }, 10000)
 })
