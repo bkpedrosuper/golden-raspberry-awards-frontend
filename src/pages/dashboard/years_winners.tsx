@@ -3,21 +3,17 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
-import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
-import TableRow from '@mui/material/TableRow';
 import TableHead from '@mui/material/TableHead';
 import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
 
 import React from 'react';
-import {StyledTableCell, StyledTableRow} from '../styles/table_style'
+import { StyledTableCell, StyledTableRow } from '../styles/table_style'
 
 import { ListWinnersYears } from '../../interfaces/interfaces';
 
 
-
-const ListWinnerCard: React.FC<ListWinnersYears> = ({years}) => {
+const ListWinnerCard: React.FC<ListWinnersYears> = ({ years }) => {
     return (
         <Card>
             <CardContent>
@@ -33,7 +29,7 @@ const ListWinnerCard: React.FC<ListWinnersYears> = ({years}) => {
                             </StyledTableRow>
                         </TableHead>
                         <TableBody>
-                            {years.map( (year, index) => (
+                            {years.map((year, index) => (
                                 <StyledTableRow key={index}>
                                     <StyledTableCell align="center">{year.year}</StyledTableCell>
                                     <StyledTableCell align="center">{year.winnerCount}</StyledTableCell>

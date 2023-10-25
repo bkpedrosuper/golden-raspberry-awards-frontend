@@ -152,7 +152,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -270,7 +270,7 @@
   }
 
   .logo {
-    filter: invert(.0) drop-shadow(0 0 0.3rem #ffffff70);
+    filter: invert(0) drop-shadow(0 0 0.3rem #ffffff70);
   }
 }
 

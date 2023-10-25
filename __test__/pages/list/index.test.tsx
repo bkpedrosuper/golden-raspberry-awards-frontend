@@ -1,17 +1,16 @@
 import React from 'react'
-import {render, screen} from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import api from '@/services/api'
-import { minMaxIntervals, studioWinnersList, yearsWinnersList} from '@/interfaces/interfaces'
 import List from '@/pages/list'
 
 describe('DashBoard Cards Module', () => {
     it('Check if all cards are loaded', () => {
         render(<List />)
         // Check if all buttons and textfield are being rendered
-        const title = screen.getByRole('heading', {name: 'List movies'})
+        const title = screen.getByRole('heading', { name: 'List movies' })
         const textField = screen.getByLabelText('Year')
-        const selectField = screen.getByRole('combobox', {name: 'Winner?'})
+        const selectField = screen.getByRole('combobox', { name: 'Winner?' })
         const searchButton = screen.getByTestId('search-button');
 
         expect(title).toBeInTheDocument()
@@ -22,7 +21,7 @@ describe('DashBoard Cards Module', () => {
 
     it('Should return 15 results with no filters in the first page', async () => {
         const response = await api.get(`?page=0&size=15`)
-        expect(response.data.content.length).toBe(15)        
+        expect(response.data.content.length).toBe(15)
     })
 
     it('Should return only valid winners if the winner parameter is being passed', async () => {
