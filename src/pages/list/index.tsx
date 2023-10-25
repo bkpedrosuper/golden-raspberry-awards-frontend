@@ -133,15 +133,15 @@ const MovieListPage: React.FC = () => {
                     ) : (<><p>{message}</p></>)}
 
                 </CardContent>
+                <CardContent className={styles.container}>
+                    <Pagination
+                        count={totalPages}
+                        page={page}
+                        onChange={handlePaginationChange}
+                    />
+                </CardContent>
             </Card>
 
-        </main>
-        <main className={styles.content}>
-            <Pagination
-                count={totalPages}
-                page={page}
-                onChange={handlePaginationChange}
-            />
         </main>
     </div>
   );
