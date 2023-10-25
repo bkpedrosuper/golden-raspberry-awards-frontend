@@ -34,7 +34,7 @@ const MovieSearch = () => {
     <Card>
         <CardContent>
             <Typography variant="h5" gutterBottom fontWeight="bold">
-                List movies winner by year
+                List movie winner by year
             </Typography>
             
             <Grid container spacing={3}>

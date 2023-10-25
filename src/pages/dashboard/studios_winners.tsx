@@ -22,13 +22,13 @@ const ListStudiosCard: React.FC<ListWinnersStudios> = ({studios}) => {
         <Card>
             <CardContent>
                 <Typography variant="h5" gutterBottom fontWeight="bold">
-                    Top 3 studios
+                    Top 3 studios with winners
                 </Typography>
                 <TableContainer component={Paper}>
                     <Table size="small" aria-label="a dense table">
                         <TableHead>
                             <StyledTableRow>
-                                <StyledTableCell align="center"> <strong>Studio</strong> </StyledTableCell>
+                                <StyledTableCell align="center"> <strong>Name</strong> </StyledTableCell>
                                 <StyledTableCell align="center"> <strong>Win count</strong></StyledTableCell>
                             </StyledTableRow>
                         </TableHead>
