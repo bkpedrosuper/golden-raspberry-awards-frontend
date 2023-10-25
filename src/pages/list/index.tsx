@@ -56,9 +56,11 @@ const MovieListPage: React.FC = () => {
     })
   }
 
-  useEffect( () => {
-    handlePagination(1)
-  }, [])
+  useEffect(() => {
+        handlePagination(1);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+  
 
   return (
     <div className={styles.page}>
