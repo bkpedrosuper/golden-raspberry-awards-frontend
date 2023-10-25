@@ -1,10 +1,10 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+  padding: 2rem;
+  height: 100vh;
 }
 
 .page {
@@ -26,9 +26,6 @@
 }
 
 .menus {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   width: 80%;
 }
 
@@ -37,8 +34,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 5rem;
-  padding: 4rem;
+  padding: 2rem;
 }
 
 .table_list {
@@ -96,6 +92,8 @@
 }
 
 .card {
+  display: flex;
+  justify-content: center;
   padding: 1rem 1.2rem;
   border-radius: var(--border-radius);
   background: rgba(var(--card-rgb), 0);
@@ -135,27 +133,19 @@
   padding: 4rem 0;
 }
 
-.center::before {
-  background: var(--secondary-glow);
-  border-radius: 50%;
-  width: 480px;
-  height: 360px;
-  margin-left: -400px;
-}
-
-.center::after {
+.main::after {
   background: var(--primary-glow);
-  width: 240px;
+  width: 140px;
   height: 180px;
   z-index: -1;
 }
 
-.center::before,
-.center::after {
+.main::before,
+.main::after {
   content: "";
   left: 50%;
   position: absolute;
-  filter: blur(45px);
+  filter: blur(20px);
   transform: translateZ(0);
 }
 
